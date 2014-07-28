@@ -1,10 +1,11 @@
 /**
  * fx.re-sta.js
  * Description: re-sta汎用JS
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: ktymtkhr
  * URI: https://github.com/ktymtkhr/fx.re-sta.js/
  * created: July 11, 2014
+ * modified: July 23, 2014
  *
  */
 
@@ -28,7 +29,7 @@ $j(function() {
     });
     //切替画像プリロード
     for(i=0;i<$j('.off-on').length;i++){
-    	img_preload($j('.off-on').eq(i).attr('src').replace('-off','-on'));
+      img_preload($j('.off-on').eq(i).attr('src').replace('-off','-on'));
     }
 
   }
@@ -78,7 +79,7 @@ $j(function() {
 
 //確認ダイアログ表示(Y/N)
 function check(msg){
-  if( msg == undefined ) { msg = 'よろしいですか？';}
+  if( typeof msg === 'undefined' ) { msg = 'よろしいですか？';}
   if(window.confirm(msg)) {
     return true;
   } else {
